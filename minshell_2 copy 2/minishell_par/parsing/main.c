@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: oelbied <oelbied@student.42.fr>            +#+  +:+       +#+        */
+/*   By: sidrissi <sidrissi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/24 11:15:46 by sidrissi          #+#    #+#             */
-/*   Updated: 2025/05/28 11:51:14 by oelbied          ###   ########.fr       */
+/*   Updated: 2025/05/28 15:09:08 by sidrissi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -196,7 +196,7 @@ void siginl_hendel(int sig)
 	(void)sig;
 	write(STDOUT_FILENO, "\n", 1);
 	rl_on_new_line();
-	rl_replace_line("",0);
+	// rl_replace_line("",0);
 	rl_redisplay();
 }
 int main(int ac, char **av, char **env)
