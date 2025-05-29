@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   minishell.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: oelbied <oelbied@student.42.fr>            +#+  +:+       +#+        */
+/*   By: sidrissi <sidrissi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/23 21:22:56 by sidrissi          #+#    #+#             */
-/*   Updated: 2025/05/28 11:40:13 by oelbied          ###   ########.fr       */
+/*   Updated: 2025/05/28 16:36:10 by sidrissi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,9 @@
 
 #ifndef MINISHELL_H
 # define MINISHELL_H
+
+#include <readline/readline.h>
+#include <readline/history.h>
 
 # include <stdio.h>
 # include <unistd.h>
@@ -159,6 +162,7 @@ typedef struct s_var_data
 
 int			check_quotes(char *line, int i, int count_quote);
 t_token		*lexing(char *line, int *flag, t_listenv *head);
+int			helper_main(t_token *tokens, int *flag, t_listenv **head);
 
 int			sp(char c);
 t_token		*tokenization(char *line, int i);

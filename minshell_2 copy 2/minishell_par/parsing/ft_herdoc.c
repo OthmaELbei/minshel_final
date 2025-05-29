@@ -6,7 +6,7 @@
 /*   By: sidrissi <sidrissi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/13 05:40:07 by sidrissi          #+#    #+#             */
-/*   Updated: 2025/05/25 09:39:19 by sidrissi         ###   ########.fr       */
+/*   Updated: 2025/05/28 19:06:24 by sidrissi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -185,7 +185,6 @@ static int handle_heredoc_parent(pid_t pid, int fd, char *random_name, char **ex
 	return (0);
 }
 
-// Main heredoc opening function
 int	open_herdoc(char *delimter, char *random_name, int *n, t_listenv *head)
 {
 	int		fd[2];

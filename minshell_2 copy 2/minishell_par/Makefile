@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: oelbied <oelbied@student.42.fr>            +#+  +:+       +#+         #
+#    By: sidrissi <sidrissi@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/05/24 20:29:40 by oelbied           #+#    #+#              #
-#    Updated: 2025/05/28 11:52:50 by oelbied          ###   ########.fr        #
+#    Updated: 2025/05/28 17:00:38 by sidrissi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ RM = rm -f
 # FLAGS = -Wall -Wextra -Werror -fsanitize=address
 # FLAGS = -Wall -Wextra -Werror
 READLINE = $(shell brew --prefix readline)
-CFLAGS = -Wall -Wextra -Werror -I$(READLINE)/include  #-fsanitize=address
+CFLAGS = -Wall -Wextra -Werror -I$(READLINE)/include #-g -fsanitize=address
 # CFLAGS = -Wall -Wextra -Werror  -fsanitize=address
 LDFLAGS =   $(CFLAGS) -L$(READLINE)/lib -lreadline
 
@@ -23,6 +23,7 @@ SRC = parsing/main.c parsing/tokenization.c parsing/tokenization_helper.c parsin
 	parsing/error_helper.c parsing/expand.c parsing/expand_helper1.c parsing/expand_helper2.c\
 	parsing/ft_rename.c parsing/ft_herdoc.c parsing/ft_herdoc_expand.c parsing/ft_herdoc_expand_helper.c\
 	parsing/parsing.c parsing/parsing_helper.c parsing/fake_herdoc.c parsing/ft_herdoc_get_name.c\
+	parsing/helper_main.c\
 	libft/ft_putstr_fd.c libft/ft_strlen.c libft/ft_cmp.c libft/ft_strjoin.c\
 	libft/linked_list.c libft/ft_substr.c libft/ft_strdup.c libft/ft_isprint.c\
 	libft/ft_isalnum.c libft/ft_isalpha.c libft/ft_isdigit.c libft/ft_strncmp.c\
